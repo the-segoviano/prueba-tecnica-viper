@@ -68,10 +68,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             self.handleEventCamera()
         case .userName: break;
         case .graph:
-            print(" Hacia las graficas.. ")
-            //let detalle: UIViewController = GraphDetailViewController()
-            //let nav = UINavigationController(rootViewController: detalle)
-            //self.present(nav, animated: true, completion: nil)
+            let detalle: UIViewController = GraphDetailViewController()
+            let nav = UINavigationController(rootViewController: detalle)
+            detalle.modalPresentationStyle = .currentContext
+            detalle.modalTransitionStyle = .coverVertical
+            self.present(nav, animated: true, completion: nil)
+            
+            //self.navigationController?.pushViewController(nav, animated: true)
         }
         
     }

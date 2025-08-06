@@ -34,6 +34,7 @@
 		F29C72E32E44174B00A191EC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72E22E44174B00A191EC /* UIViewController+Extension.swift */; };
 		F29C72E52E4417E100A191EC /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72E42E4417E100A191EC /* UIImage+Extension.swift */; };
 		F29C72E72E44188700A191EC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72E62E44188700A191EC /* String+Extension.swift */; };
+		F29C72E92E441B0F00A191EC /* GraphDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72E82E441B0F00A191EC /* GraphDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		F29C72E22E44174B00A191EC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		F29C72E42E4417E100A191EC /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F29C72E62E44188700A191EC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		F29C72E82E441B0F00A191EC /* GraphDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				F29C72C42E44102500A191EC /* ViewController+UITableView.swift */,
 				F29C72D22E4411D300A191EC /* AvatarCell.swift */,
 				F29C72D42E44125400A191EC /* UsernameCell.swift */,
+				F29C72E82E441B0F00A191EC /* GraphDetailViewController.swift */,
 			);
 			path = "prueba-tecnica-viper";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				C64B40752E43C21A00D66F31 /* AppDelegate.swift in Sources */,
 				C64B40772E43C21A00D66F31 /* SceneDelegate.swift in Sources */,
 				F29C72E72E44188700A191EC /* String+Extension.swift in Sources */,
+				F29C72E92E441B0F00A191EC /* GraphDetailViewController.swift in Sources */,
 				F29C72E12E44172B00A191EC /* UITableViewCell+Extension.swift in Sources */,
 				C64B40D42E43DF2700D66F31 /* ViewController+UIImagePickerController.swift in Sources */,
 				F29C72D32E4411D300A191EC /* AvatarCell.swift in Sources */,
