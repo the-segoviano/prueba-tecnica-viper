@@ -58,5 +58,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    
+    <!-- PERMISOS PARA LA CAMARA -->
+    <key>NSCameraUsageDescription</key>
+    <string>$(PRODUCT_NAME) requiere su permiso para tomar una fotografía con su camara y actualizar su imagen de Perfil.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>$(PRODUCT_NAME) requiere su permiso para seleccionar una imagen desde su galería y actualizar su imagen de Perfil.</string>
+    <key>PHPhotoLibraryPreventAutomaticLimitedAccessAlert</key>
+    <true/>
+    
+    
 </dict>
 </plist>
