@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		C64B40CD2E43DC3C00D66F31 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64B40CC2E43DC3C00D66F31 /* Helpers.swift */; };
 		C64B40D02E43DCD200D66F31 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64B40CF2E43DCD200D66F31 /* Extensions.swift */; };
 		C64B40D42E43DF2700D66F31 /* ViewController+UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64B40D32E43DF2700D66F31 /* ViewController+UIImagePickerController.swift */; };
+		F29C728D2E43E31200A191EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29C728C2E43E31200A191EC /* GoogleService-Info.plist */; };
+		F29C72902E43E3A300A191EC /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F29C728F2E43E3A300A191EC /* FirebaseDatabase */; };
+		F29C72922E43E3A300A191EC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F29C72912E43E3A300A191EC /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,7 @@
 		C64B40CC2E43DC3C00D66F31 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		C64B40CF2E43DCD200D66F31 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C64B40D32E43DF2700D66F31 /* ViewController+UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UIImagePickerController.swift"; sourceTree = "<group>"; };
+		F29C728C2E43E31200A191EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29C72902E43E3A300A191EC /* FirebaseDatabase in Frameworks */,
+				F29C72922E43E3A300A191EC /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +66,7 @@
 		C64B40732E43C21A00D66F31 /* prueba-tecnica-viper */ = {
 			isa = PBXGroup;
 			children = (
+				F29C728C2E43E31200A191EC /* GoogleService-Info.plist */,
 				C64B40742E43C21A00D66F31 /* AppDelegate.swift */,
 				C64B40762E43C21A00D66F31 /* SceneDelegate.swift */,
 				C64B40782E43C21A00D66F31 /* ViewController.swift */,
@@ -116,6 +123,9 @@
 				Base,
 			);
 			mainGroup = C64B40682E43C21A00D66F31;
+			packageReferences = (
+				F29C728E2E43E3A300A191EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C64B40722E43C21A00D66F31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +142,7 @@
 			files = (
 				C64B40812E43C22700D66F31 /* LaunchScreen.storyboard in Resources */,
 				C64B407E2E43C22700D66F31 /* Assets.xcassets in Resources */,
+				F29C728D2E43E31200A191EC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +358,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F29C728E2E43E3A300A191EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F29C728F2E43E3A300A191EC /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F29C728E2E43E3A300A191EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		F29C72912E43E3A300A191EC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F29C728E2E43E3A300A191EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C64B40692E43C21A00D66F31 /* Project object */;
 }
