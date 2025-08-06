@@ -11,13 +11,11 @@ import UIKit
 struct Constants {
     
     struct Strings {
-        static let titleApp = "UPAX"
         static let ok = "ok"
         static let cancel = "Cancelar"
         static let send = "Enviar"
-        static let username = "Username"
+        static let username = "nombre del usuario"
         static let close = "Cerrar"
-        
     }
     
     
