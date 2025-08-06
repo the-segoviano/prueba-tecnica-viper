@@ -19,6 +19,16 @@
 		F29C72902E43E3A300A191EC /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F29C728F2E43E3A300A191EC /* FirebaseDatabase */; };
 		F29C72922E43E3A300A191EC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F29C72912E43E3A300A191EC /* FirebaseFirestore */; };
 		F29C72BF2E4401C500A191EC /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72BE2E4401C500A191EC /* ColorManager.swift */; };
+		F29C72C12E440F2A00A191EC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72C02E440F2A00A191EC /* Profile.swift */; };
+		F29C72C32E440F7600A191EC /* ViewController+UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72C22E440F7600A191EC /* ViewController+UIWindow.swift */; };
+		F29C72C52E44102500A191EC /* ViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72C42E44102500A191EC /* ViewController+UITableView.swift */; };
+		F29C72C72E4410FB00A191EC /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72C62E4410FB00A191EC /* Alerts.swift */; };
+		F29C72CB2E44112A00A191EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72CA2E44112A00A191EC /* Constants.swift */; };
+		F29C72CD2E44118E00A191EC /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72CC2E44118E00A191EC /* BaseTableViewCell.swift */; };
+		F29C72CF2E4411A900A191EC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72CE2E4411A900A191EC /* CustomTextField.swift */; };
+		F29C72D12E4411BD00A191EC /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72D02E4411BD00A191EC /* BaseButton.swift */; };
+		F29C72D32E4411D300A191EC /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72D22E4411D300A191EC /* AvatarCell.swift */; };
+		F29C72D52E44125400A191EC /* UsernameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72D42E44125400A191EC /* UsernameCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +44,16 @@
 		C64B40D32E43DF2700D66F31 /* ViewController+UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UIImagePickerController.swift"; sourceTree = "<group>"; };
 		F29C728C2E43E31200A191EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F29C72BE2E4401C500A191EC /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		F29C72C02E440F2A00A191EC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		F29C72C22E440F7600A191EC /* ViewController+UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UIWindow.swift"; sourceTree = "<group>"; };
+		F29C72C42E44102500A191EC /* ViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UITableView.swift"; sourceTree = "<group>"; };
+		F29C72C62E4410FB00A191EC /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		F29C72CA2E44112A00A191EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F29C72CC2E44118E00A191EC /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		F29C72CE2E4411A900A191EC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		F29C72D02E4411BD00A191EC /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		F29C72D22E4411D300A191EC /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		F29C72D42E44125400A191EC /* UsernameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +99,16 @@
 				C64B40CF2E43DCD200D66F31 /* Extensions.swift */,
 				C64B40D32E43DF2700D66F31 /* ViewController+UIImagePickerController.swift */,
 				F29C72BE2E4401C500A191EC /* ColorManager.swift */,
+				F29C72C02E440F2A00A191EC /* Profile.swift */,
+				F29C72C22E440F7600A191EC /* ViewController+UIWindow.swift */,
+				F29C72C42E44102500A191EC /* ViewController+UITableView.swift */,
+				F29C72C62E4410FB00A191EC /* Alerts.swift */,
+				F29C72CA2E44112A00A191EC /* Constants.swift */,
+				F29C72CC2E44118E00A191EC /* BaseTableViewCell.swift */,
+				F29C72CE2E4411A900A191EC /* CustomTextField.swift */,
+				F29C72D02E4411BD00A191EC /* BaseButton.swift */,
+				F29C72D22E4411D300A191EC /* AvatarCell.swift */,
+				F29C72D42E44125400A191EC /* UsernameCell.swift */,
 			);
 			path = "prueba-tecnica-viper";
 			sourceTree = "<group>";
@@ -156,13 +186,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29C72CF2E4411A900A191EC /* CustomTextField.swift in Sources */,
+				F29C72D12E4411BD00A191EC /* BaseButton.swift in Sources */,
 				F29C72BF2E4401C500A191EC /* ColorManager.swift in Sources */,
+				F29C72C12E440F2A00A191EC /* Profile.swift in Sources */,
 				C64B40D02E43DCD200D66F31 /* Extensions.swift in Sources */,
+				F29C72C32E440F7600A191EC /* ViewController+UIWindow.swift in Sources */,
+				F29C72D52E44125400A191EC /* UsernameCell.swift in Sources */,
 				C64B40792E43C21A00D66F31 /* ViewController.swift in Sources */,
 				C64B40752E43C21A00D66F31 /* AppDelegate.swift in Sources */,
 				C64B40772E43C21A00D66F31 /* SceneDelegate.swift in Sources */,
 				C64B40D42E43DF2700D66F31 /* ViewController+UIImagePickerController.swift in Sources */,
+				F29C72D32E4411D300A191EC /* AvatarCell.swift in Sources */,
+				F29C72C52E44102500A191EC /* ViewController+UITableView.swift in Sources */,
+				F29C72C72E4410FB00A191EC /* Alerts.swift in Sources */,
 				C64B40CD2E43DC3C00D66F31 /* Helpers.swift in Sources */,
+				F29C72CD2E44118E00A191EC /* BaseTableViewCell.swift in Sources */,
+				F29C72CB2E44112A00A191EC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,18 +8,11 @@
 import UIKit
 import FirebaseFirestore
 
-struct Profile: Identifiable {
-    let id: String
-    let fullName: String
-    let image: UIImage
-}
-
-
-
 class ViewController: UIViewController {
     
     // MARK: Realtime Database
     private let colorManager = ColorManager()
+    
     private let colorView = UIView()
     private let nameLabel = UILabel()
     private let hexLabel = UILabel()
@@ -53,14 +46,13 @@ class ViewController: UIViewController {
     let db = Firestore.firestore()
 
     
-    /// Life Cycle
+    // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         UserDefaults.standard.set(false, forKey: "was-avatar-updated")
         
-        // setupUI()
         setupColorManager()
     }
     
@@ -68,46 +60,6 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         fetchLastProfile()
         setupTableView()
-    }
-    
-    
-    private func setupUI() {
-        // Configurar vista de color
-        colorView.translatesAutoresizingMaskIntoConstraints = false
-        colorView.layer.cornerRadius = 16
-        colorView.layer.shadowRadius = 8
-        colorView.layer.shadowOpacity = 0.3
-        view.addSubview(colorView)
-        
-        // Configurar labels
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.font = .systemFont(ofSize: 24, weight: .bold)
-        nameLabel.textColor = .white
-        nameLabel.textAlignment = .center
-        colorView.addSubview(nameLabel)
-        
-        hexLabel.translatesAutoresizingMaskIntoConstraints = false
-        hexLabel.font = .systemFont(ofSize: 18, weight: .medium)
-        hexLabel.textColor = .white
-        hexLabel.textAlignment = .center
-        colorView.addSubview(hexLabel)
-        
-        // Constraints
-        NSLayoutConstraint.activate([
-            colorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            colorView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            colorView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
-            colorView.heightAnchor.constraint(equalTo: colorView.widthAnchor),
-            
-            nameLabel.centerXAnchor.constraint(equalTo: colorView.centerXAnchor),
-            nameLabel.centerYAnchor.constraint(equalTo: colorView.centerYAnchor, constant: -20),
-            nameLabel.leadingAnchor.constraint(equalTo: colorView.leadingAnchor, constant: 16),
-            nameLabel.trailingAnchor.constraint(equalTo: colorView.trailingAnchor, constant: -16),
-            
-            hexLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
-            hexLabel.leadingAnchor.constraint(equalTo: colorView.leadingAnchor, constant: 16),
-            hexLabel.trailingAnchor.constraint(equalTo: colorView.trailingAnchor, constant: -16)
-        ])
     }
     
     
@@ -122,21 +74,16 @@ class ViewController: UIViewController {
     
     private func updateUI(with color: UIColor, name: String) {
         UIView.animate(withDuration: 0.1) {
-            self.colorView.backgroundColor = color
-            self.nameLabel.text = name
-            self.hexLabel.text = color.hexString
-            
-            // Actualizar toda la app
             if let window = self.view.window {
-                window.updateBackgroundColor(color) // color.withAlphaComponent(0.1)
+                window.updateBackgroundColor(color)
             }
         }
     }
     
+    
     deinit {
         colorManager.stopListening()
     }
-    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -185,9 +132,6 @@ class ViewController: UIViewController {
         
         UserDefaults.standard.set(username, forKey: "username")
         
-        
-        
-        
         guard let avatarData = UserDefaults.standard.data(forKey: "avatar") else {
             return
         }
@@ -215,32 +159,6 @@ class ViewController: UIViewController {
         // Guardar los datos en Firestore
         saveProfile(name: username, imageBase64: imageBase64String)
         
-        
-        // MARK: Firestore
-        // let path: String = "avatar-images/\(username).png"
-        
-        /*
-        storage.child(path).putData(avatarData, metadata: nil) { [weak self] _, error in
-            guard error == nil else {
-                return
-            }
-            self?.storage.child(path).downloadURL { [weak self] (url, error) in
-                guard let url = url, error == nil else {
-                    return
-                }
-                let urlString = url.absoluteString
-                print(" url-firestore ", urlString, "\n")
-                UserDefaults.standard.set(urlString, forKey: "url-firestore")
-                DispatchQueue.main.async {
-                    Alert.showSuccessAlert(on: self!)
-                    if let usernametextField = self?.view.viewWithTag(Constants.Tags.userNameInput) as? UITextField
-                    {
-                        usernametextField.text = ""
-                    }
-                }
-            }
-        }
-        */
     }
     
     private func saveProfile(name: String, imageBase64: String) {
@@ -296,129 +214,5 @@ class ViewController: UIViewController {
                 }
             }
     }
-    
-    
-    
-}
-
-
-
-
-extension UIWindow {
-    func updateBackgroundColor(_ color: UIColor) {
-        UIView.animate(withDuration: 0.3) {
-            self.backgroundColor = color
-            self.rootViewController?.view.backgroundColor = color
-        }
-    }
-}
-
-
-
-
-// MARK: - Delegate & Dataspurce UITableView
-
-enum CustomSections: CaseIterable
-{
-    case avatar, userName, graph
-    
-    static func numberOfSections() -> Int
-    {
-        return self.allCases.count
-    }
-    
-    static func getSection(_ section: Int) -> CustomSections
-    {
-        return self.allCases[section]
-    }
-    
-}
-
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CustomSections.numberOfSections()
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch CustomSections.getSection(indexPath.row) {
-        
-        case .avatar:
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.IdForCell.avatarCell, for: indexPath)
-            if let cell = cell as? AvatarCell {
-                cell.setUpView()
-                return cell
-            }
-        case .userName:
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.IdForCell.usernameCell, for: indexPath)
-            if let cell = cell as? UsernameCell {
-                cell.setUpView()
-                return cell
-            }
-        case .graph:
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.IdForCell.graphCell, for: indexPath)
-            if let cell = cell as? GraphCell {
-                cell.setUpView()
-                return cell
-            }
-        }
-        return UITableViewCell()
-    }
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        switch CustomSections.getSection(indexPath.row) {
-        case .avatar:
-            self.handleEventCamera()
-        case .userName: break;
-        case .graph:
-            print(" Hacia las graficas.. ")
-            //let detalle: UIViewController = GraphDetailViewController()
-            //let nav = UINavigationController(rootViewController: detalle)
-            //self.present(nav, animated: true, completion: nil)
-        }
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch CustomSections.getSection(indexPath.row) {
-        case .avatar:
-            return 90.0
-        case .userName:
-            return 45.0
-        case .graph:
-            return 45.0
-        }
-    }
-    
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
-    {
-        
-        let cornerRadius = Constants.Value.cornerRadius
-        var corners: UIRectCorner = []
-
-        if indexPath.row == 0
-        {
-            corners.update(with: .topLeft)
-            corners.update(with: .topRight)
-        }
-
-        if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1
-        {
-            corners.update(with: .bottomLeft)
-            corners.update(with: .bottomRight)
-        }
-
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = UIBezierPath(roundedRect: cell.bounds,
-                                      byRoundingCorners: corners,
-                                      cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)).cgPath
-        cell.layer.mask = maskLayer
-    }
-    
     
 }
