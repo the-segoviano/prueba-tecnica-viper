@@ -7,6 +7,117 @@
 
 import UIKit
 
+class ViewController: UIViewController, ProfileViewProtocol {
+    
+    // Tiene una referencia a su Presenter.
+    var presenter: ProfilePresenterProtocol?
+    
+    private var lastProfileViewModel: ProfileViewModel?
+    private var selectedAvatarData: Data?
+    
+    // MARK: - UI Components
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UsernameCell.self, forCellReuseIdentifier: Constants.IdForCell.usernameCell)
+        tableView.register(AvatarCell.self, forCellReuseIdentifier: Constants.IdForCell.avatarCell)
+        tableView.register(GraphCell.self, forCellReuseIdentifier: Constants.IdForCell.graphCell)
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        tableView.alwaysBounceVertical = false
+        return tableView
+    }()
+    
+    lazy var sendButton: UIButton = {
+        let button = BaseButton.standardButton(withTitle: Constants.Strings.send)
+        button.addTarget(self, action: #selector(didTapSaveButton), for: .touchUpInside)
+        return button
+    }()
+    
+    // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        UserDefaults.standard.set(false, forKey: "was-avatar-updated")
+        setupUI()
+        presenter?.viewDidLoad()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let tableViewHeight = self.tableView.frame.height
+        let contentHeight   = self.tableView.contentSize.height
+        let centeringInset  = (tableViewHeight - contentHeight) / 2.0
+        let topInset        = max(centeringInset, 0.0)
+        self.tableView.contentInset = UIEdgeInsets(top: topInset, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+    
+    // MARK: - Actions (Delegación al Presenter)
+    @objc private func didTapSaveButton() {
+        var username: String = ""
+        if let usernametextField = view.viewWithTag(Constants.Tags.userNameInput) as? UITextField {
+            username = usernametextField.text!
+        }
+        guard let avatarData = UserDefaults.standard.data(forKey: "avatar") else {
+            return
+        }
+        presenter?.didTapSaveButton(username: username, avatarData: avatarData)
+    }
+    
+    // MARK: - ProfileViewProtocol (Implementación de las órdenes del Presenter)
+    func displayLastProfile(viewModel: ProfileViewModel) {
+        self.lastProfileViewModel = viewModel
+        tableView.reloadData()
+    }
+    
+    func displayError(message: String) {
+        Alert.show(title: "Error", message: message, on: self)
+    }
+    
+    func displaySuccess(message: String) {
+        Alert.show(title: "Éxito", message: message, on: self)
+        if let usernametextField = view.viewWithTag(Constants.Tags.userNameInput) as? UITextField {
+            usernametextField.text = ""
+        }
+        //UserDefaults.standard.set("", forKey: "url-firestore")
+        //UserDefaults.standard.set(nil, forKey: "avatar")
+    }
+    
+    func updateBackgroundColor(with color: UIColor) {
+        UIView.animate(withDuration: 0.3) {
+            if let window = self.view.window {
+                window.updateBackgroundColor(color)
+            }
+            // self.view.window?.backgroundColor = color
+        }
+    }
+    
+    // MARK: - UI Setup (Sin cambios)
+    private func setupUI() {
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.heightAnchor.constraint(equalToConstant: view.frame.width / 2),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32)
+        ])
+        
+        view.addSubview(sendButton)
+        NSLayoutConstraint.activate([
+            sendButton.widthAnchor.constraint(equalToConstant: 120),
+            sendButton.heightAnchor.constraint(equalToConstant: Constants.Value.htButton),
+            sendButton.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 16),
+            sendButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+    
+}
+
+
+
+/*
 class ViewController: UIViewController {
     
     // MARK: Services
@@ -163,3 +274,4 @@ class ViewController: UIViewController {
         }
     }
 }
+*/
