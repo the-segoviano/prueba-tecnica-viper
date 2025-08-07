@@ -45,6 +45,10 @@
 		F29C73072E4438A900A191EC /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C73062E4438A900A191EC /* ProfilePresenter.swift */; };
 		F29C73092E4438E700A191EC /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C73082E4438E700A191EC /* ProfileInteractor.swift */; };
 		F29C730B2E44390A00A191EC /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C730A2E44390A00A191EC /* ProfileRouter.swift */; };
+		F29C730D2E44599500A191EC /* ChartsDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C730C2E44599500A191EC /* ChartsDetailProtocols.swift */; };
+		F29C730F2E445A3100A191EC /* ChartsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C730E2E445A3100A191EC /* ChartsDetailPresenter.swift */; };
+		F29C73112E445A6300A191EC /* ChartsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C73102E445A6300A191EC /* ChartsDetailInteractor.swift */; };
+		F29C73132E445A8500A191EC /* ChartsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C73122E445A8500A191EC /* ChartsDetailRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +90,10 @@
 		F29C73062E4438A900A191EC /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		F29C73082E4438E700A191EC /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		F29C730A2E44390A00A191EC /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		F29C730C2E44599500A191EC /* ChartsDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDetailProtocols.swift; sourceTree = "<group>"; };
+		F29C730E2E445A3100A191EC /* ChartsDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDetailPresenter.swift; sourceTree = "<group>"; };
+		F29C73102E445A6300A191EC /* ChartsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDetailInteractor.swift; sourceTree = "<group>"; };
+		F29C73122E445A8500A191EC /* ChartsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDetailRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +277,7 @@
 				F29C73012E4435D900A191EC /* Presenter */,
 				F29C73002E4435CF00A191EC /* Interactor */,
 				F29C72FF2E4435C600A191EC /* View */,
+				F29C730C2E44599500A191EC /* ChartsDetailProtocols.swift */,
 			);
 			path = ChartsDetail;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 		F29C73002E4435CF00A191EC /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				F29C73102E445A6300A191EC /* ChartsDetailInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -292,6 +302,7 @@
 		F29C73012E4435D900A191EC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				F29C730E2E445A3100A191EC /* ChartsDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -309,6 +320,7 @@
 		F29C73032E4435E800A191EC /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				F29C73122E445A8500A191EC /* ChartsDetailRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -389,6 +401,7 @@
 			files = (
 				F29C730B2E44390A00A191EC /* ProfileRouter.swift in Sources */,
 				F29C72ED2E44260A00A191EC /* PieChartView.swift in Sources */,
+				F29C730D2E44599500A191EC /* ChartsDetailProtocols.swift in Sources */,
 				F29C72CF2E4411A900A191EC /* CustomTextField.swift in Sources */,
 				F29C73052E4437EE00A191EC /* ProfileProtocols.swift in Sources */,
 				F29C72DF2E4416F000A191EC /* UIColor+Extension.swift in Sources */,
@@ -398,10 +411,13 @@
 				F29C72C32E440F7600A191EC /* ViewController+UIWindow.swift in Sources */,
 				F29C73072E4438A900A191EC /* ProfilePresenter.swift in Sources */,
 				F29C72D52E44125400A191EC /* UsernameCell.swift in Sources */,
+				F29C73132E445A8500A191EC /* ChartsDetailRouter.swift in Sources */,
 				C64B40792E43C21A00D66F31 /* ViewController.swift in Sources */,
 				F29C72E52E4417E100A191EC /* UIImage+Extension.swift in Sources */,
+				F29C730F2E445A3100A191EC /* ChartsDetailPresenter.swift in Sources */,
 				C64B40752E43C21A00D66F31 /* AppDelegate.swift in Sources */,
 				F29C73092E4438E700A191EC /* ProfileInteractor.swift in Sources */,
+				F29C73112E445A6300A191EC /* ChartsDetailInteractor.swift in Sources */,
 				C64B40772E43C21A00D66F31 /* SceneDelegate.swift in Sources */,
 				F29C72E72E44188700A191EC /* String+Extension.swift in Sources */,
 				F29C72F32E44275E00A191EC /* ChartData.swift in Sources */,

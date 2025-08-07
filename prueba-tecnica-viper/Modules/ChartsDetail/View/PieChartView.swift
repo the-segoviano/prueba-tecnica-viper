@@ -15,7 +15,7 @@ struct PieChartView: View {
             Text(question.pregunta)
                 .font(.headline)
                 .multilineTextAlignment(.center)
-                .padding(.bottom, 20)
+                .padding(.bottom, 10)
             
             Chart(question.values) { dataPoint in
                 SectorMark(
@@ -30,10 +30,15 @@ struct PieChartView: View {
                         .foregroundColor(.white)
                 }
             }
-            .chartLegend(position: .bottom, alignment: .center, spacing: 10)
+            .chartLegend(position: .bottom, alignment: .center, spacing: 15)
             .aspectRatio(1, contentMode: .fit)
             .padding()
         }
+        .padding()
+        .background(Color(.secondarySystemGroupedBackground))
+        .cornerRadius(12)
+        .padding(.horizontal)
+        
     }
 }
 
