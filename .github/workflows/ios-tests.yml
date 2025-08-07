@@ -1,0 +1,38 @@
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: macos-13
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Select Xcode 16.4
+      run: sudo xcode-select -s /Applications/Xcode_16.4.app
+
+    - name: Resolve Swift Package Dependencies
+      run: xcodebuild -resolvePackageDependencies \
+             -project prueba-tecnica-viper.xcodeproj
+
+    - name: Run Unit Tests
+      run: |
+        xcodebuild \
+          -project prueba-tecnica-viper.xcodeproj \
+          -scheme prueba-tecnica-viper \
+          -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0' \
+          clean test | xcpretty
+
+    - name: Save test result logs (si falla)
+      if: failure()
+      run: |
+        mkdir -p test-logs
+        xcodebuild \
+          -project prueba-tecnica-viper.xcodeproj \
+          -scheme prueba-tecnica-viper \
+          -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0' \
+          clean test > test-logs/test.log
