@@ -37,6 +37,9 @@
 		F29C72E92E441B0F00A191EC /* GraphDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72E82E441B0F00A191EC /* GraphDetailViewController.swift */; };
 		F29C72EB2E441E8200A191EC /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = F29C72EA2E441E8200A191EC /* test.json */; };
 		F29C72ED2E44260A00A191EC /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72EC2E44260A00A191EC /* PieChartView.swift */; };
+		F29C72EF2E44273300A191EC /* ChartValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72EE2E44273300A191EC /* ChartValue.swift */; };
+		F29C72F12E44274B00A191EC /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72F02E44274B00A191EC /* Question.swift */; };
+		F29C72F32E44275E00A191EC /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72F22E44275E00A191EC /* ChartData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		F29C72E82E441B0F00A191EC /* GraphDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphDetailViewController.swift; sourceTree = "<group>"; };
 		F29C72EA2E441E8200A191EC /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		F29C72EC2E44260A00A191EC /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		F29C72EE2E44273300A191EC /* ChartValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValue.swift; sourceTree = "<group>"; };
+		F29C72F02E44274B00A191EC /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		F29C72F22E44275E00A191EC /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,9 @@
 				F29C72D42E44125400A191EC /* UsernameCell.swift */,
 				F29C72E82E441B0F00A191EC /* GraphDetailViewController.swift */,
 				F29C72EC2E44260A00A191EC /* PieChartView.swift */,
+				F29C72EE2E44273300A191EC /* ChartValue.swift */,
+				F29C72F02E44274B00A191EC /* Question.swift */,
+				F29C72F22E44275E00A191EC /* ChartData.swift */,
 			);
 			path = "prueba-tecnica-viper";
 			sourceTree = "<group>";
@@ -272,13 +281,16 @@
 				C64B40752E43C21A00D66F31 /* AppDelegate.swift in Sources */,
 				C64B40772E43C21A00D66F31 /* SceneDelegate.swift in Sources */,
 				F29C72E72E44188700A191EC /* String+Extension.swift in Sources */,
+				F29C72F32E44275E00A191EC /* ChartData.swift in Sources */,
 				F29C72E92E441B0F00A191EC /* GraphDetailViewController.swift in Sources */,
 				F29C72E12E44172B00A191EC /* UITableViewCell+Extension.swift in Sources */,
 				C64B40D42E43DF2700D66F31 /* ViewController+UIImagePickerController.swift in Sources */,
 				F29C72D32E4411D300A191EC /* AvatarCell.swift in Sources */,
+				F29C72EF2E44273300A191EC /* ChartValue.swift in Sources */,
 				F29C72DD2E4416DA00A191EC /* UIView+Extension.swift in Sources */,
 				F29C72C52E44102500A191EC /* ViewController+UITableView.swift in Sources */,
 				F29C72C72E4410FB00A191EC /* Alerts.swift in Sources */,
+				F29C72F12E44274B00A191EC /* Question.swift in Sources */,
 				C64B40CD2E43DC3C00D66F31 /* Helpers.swift in Sources */,
 				F29C72E32E44174B00A191EC /* UIViewController+Extension.swift in Sources */,
 				F29C72CD2E44118E00A191EC /* BaseTableViewCell.swift in Sources */,

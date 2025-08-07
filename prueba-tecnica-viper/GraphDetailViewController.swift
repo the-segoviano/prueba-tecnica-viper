@@ -8,25 +8,6 @@
 import UIKit
 import SwiftUI
 
-struct ChartData: Decodable {
-    let data: [Question]
-}
-
-struct Question: Decodable {
-    let pregunta: String
-    let values: [ChartValue]
-}
-
-struct ChartValue: Decodable, Identifiable {
-    var id = UUID()
-    let label: String
-    let value: Int
-    
-    private enum CodingKeys: String, CodingKey {
-        case label, value
-    }
-}
-
 class GraphDetailViewController: UIViewController {
 
     private let scrollView = UIScrollView()
