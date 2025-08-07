@@ -112,26 +112,13 @@
 		C64B40732E43C21A00D66F31 /* prueba-tecnica-viper */ = {
 			isa = PBXGroup;
 			children = (
+				F29C72F72E44356E00A191EC /* Modules */,
 				F29C72EA2E441E8200A191EC /* test.json */,
 				F29C72D82E4415D400A191EC /* Resources */,
 				F29C72D72E4415B100A191EC /* SupportingFiles */,
 				F29C72D62E44156C00A191EC /* AppDelegates */,
 				F29C728C2E43E31200A191EC /* GoogleService-Info.plist */,
-				C64B40782E43C21A00D66F31 /* ViewController.swift */,
 				C64B40822E43C22700D66F31 /* Info.plist */,
-				C64B40D32E43DF2700D66F31 /* ViewController+UIImagePickerController.swift */,
-				F29C72BE2E4401C500A191EC /* ColorManager.swift */,
-				F29C72C02E440F2A00A191EC /* Profile.swift */,
-				F29C72C22E440F7600A191EC /* ViewController+UIWindow.swift */,
-				F29C72C42E44102500A191EC /* ViewController+UITableView.swift */,
-				F29C72D22E4411D300A191EC /* AvatarCell.swift */,
-				F29C72D42E44125400A191EC /* UsernameCell.swift */,
-				F29C72E82E441B0F00A191EC /* GraphDetailViewController.swift */,
-				F29C72EC2E44260A00A191EC /* PieChartView.swift */,
-				F29C72EE2E44273300A191EC /* ChartValue.swift */,
-				F29C72F02E44274B00A191EC /* Question.swift */,
-				F29C72F22E44275E00A191EC /* ChartData.swift */,
-				F29C72F42E442C6300A191EC /* FirestoreService.swift */,
 			);
 			path = "prueba-tecnica-viper";
 			sourceTree = "<group>";
@@ -195,6 +182,123 @@
 				F29C72E62E44188700A191EC /* String+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F29C72F72E44356E00A191EC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F29C72FE2E4435B500A191EC /* ChartsDetail */,
+				F29C72F82E44357700A191EC /* Profile */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F29C72F82E44357700A191EC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F29C72FD2E4435A900A191EC /* Router */,
+				F29C72FC2E44359E00A191EC /* Entity */,
+				F29C72FB2E44359500A191EC /* Presenter */,
+				F29C72FA2E44358700A191EC /* Interactor */,
+				F29C72F92E44358100A191EC /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F29C72F92E44358100A191EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F29C72D42E44125400A191EC /* UsernameCell.swift */,
+				F29C72D22E4411D300A191EC /* AvatarCell.swift */,
+				F29C72C42E44102500A191EC /* ViewController+UITableView.swift */,
+				C64B40D32E43DF2700D66F31 /* ViewController+UIImagePickerController.swift */,
+				F29C72C22E440F7600A191EC /* ViewController+UIWindow.swift */,
+				C64B40782E43C21A00D66F31 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F29C72FA2E44358700A191EC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F29C72F42E442C6300A191EC /* FirestoreService.swift */,
+				F29C72BE2E4401C500A191EC /* ColorManager.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F29C72FB2E44359500A191EC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F29C72FC2E44359E00A191EC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F29C72C02E440F2A00A191EC /* Profile.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F29C72FD2E4435A900A191EC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F29C72FE2E4435B500A191EC /* ChartsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F29C73032E4435E800A191EC /* Router */,
+				F29C73022E4435E200A191EC /* Entity */,
+				F29C73012E4435D900A191EC /* Presenter */,
+				F29C73002E4435CF00A191EC /* Interactor */,
+				F29C72FF2E4435C600A191EC /* View */,
+			);
+			path = ChartsDetail;
+			sourceTree = "<group>";
+		};
+		F29C72FF2E4435C600A191EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F29C72EC2E44260A00A191EC /* PieChartView.swift */,
+				F29C72E82E441B0F00A191EC /* GraphDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F29C73002E4435CF00A191EC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F29C73012E4435D900A191EC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F29C73022E4435E200A191EC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F29C72F02E44274B00A191EC /* Question.swift */,
+				F29C72EE2E44273300A191EC /* ChartValue.swift */,
+				F29C72F22E44275E00A191EC /* ChartData.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F29C73032E4435E800A191EC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
