@@ -91,12 +91,12 @@ class ViewController: UIViewController {
     
     private func setupTableView(){
         view.addSubview(tableView)
-        tableView.heightAnchor.constraint(equalToConstant: self.view.frame.width/2).isActive = true
+        tableView.heightAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
         tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16).isActive = true
         tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16).isActive = true
-        tableView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 32).isActive = true
+        tableView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 40).isActive = true
         view.addSubview(sendButton)
-        sendButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        sendButton.widthAnchor.constraint(equalToConstant: self.view.frame.width - 24).isActive = true
         sendButton.heightAnchor.constraint(equalToConstant: Constants.Value.htButton).isActive = true
         sendButton.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 16).isActive = true
         sendButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
@@ -151,12 +151,12 @@ class ViewController: UIViewController {
             guard let self = self else { return }
             switch result {
             case .success(let profile):
+                print("profile: \(profile)")
                 self.lastProfile = profile
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
             case .failure(let error):
-                // Handle the error, e.g., show an alert
                 print("Error al obtener el último perfil: \(error.localizedDescription)")
                 self.lastProfile = nil
             }

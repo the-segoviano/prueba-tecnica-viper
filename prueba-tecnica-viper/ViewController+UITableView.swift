@@ -86,7 +86,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case .userName:
             return 45.0
         case .graph:
-            return 45.0
+            return 50.0
         }
     }
     
