@@ -79,3 +79,9 @@ prueba-tecnica-viper/
 1.  [App funcionando](https://mega.nz/file/Tj4SRRCI#NsrgDQzz49sXNNGvkfQrG8xGD_8yyIHa0GYYcjXj1fo).
 
 2.  [Feature de cambiar el background de la vista desde Firestore Realtima Database](https://mega.nz/file/6uhnAYiL#udKoeRqqcsnGLyMTaaS_ZBBbaU4F-2Ao3_x-A5-SMtU).
+
+
+## Sustento teórico (Repo anterior)
+
+https://github.com/the-segoviano/prueba-t-cnica-ios-gpo-salinas/blob/main/README.md
+
