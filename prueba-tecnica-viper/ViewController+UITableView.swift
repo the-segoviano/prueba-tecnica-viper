@@ -82,9 +82,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch CustomSections.getSection(indexPath.row) {
         case .avatar:
-            return 90.0
+            return 100.0
         case .userName:
-            return 45.0
+            return 50.0
         case .graph:
             return 50.0
         }
