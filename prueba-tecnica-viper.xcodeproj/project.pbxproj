@@ -35,6 +35,8 @@
 		F29C72E52E4417E100A191EC /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72E42E4417E100A191EC /* UIImage+Extension.swift */; };
 		F29C72E72E44188700A191EC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72E62E44188700A191EC /* String+Extension.swift */; };
 		F29C72E92E441B0F00A191EC /* GraphDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72E82E441B0F00A191EC /* GraphDetailViewController.swift */; };
+		F29C72EB2E441E8200A191EC /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = F29C72EA2E441E8200A191EC /* test.json */; };
+		F29C72ED2E44260A00A191EC /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72EC2E44260A00A191EC /* PieChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		F29C72E42E4417E100A191EC /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F29C72E62E44188700A191EC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F29C72E82E441B0F00A191EC /* GraphDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphDetailViewController.swift; sourceTree = "<group>"; };
+		F29C72EA2E441E8200A191EC /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		F29C72EC2E44260A00A191EC /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		C64B40732E43C21A00D66F31 /* prueba-tecnica-viper */ = {
 			isa = PBXGroup;
 			children = (
+				F29C72EA2E441E8200A191EC /* test.json */,
 				F29C72D82E4415D400A191EC /* Resources */,
 				F29C72D72E4415B100A191EC /* SupportingFiles */,
 				F29C72D62E44156C00A191EC /* AppDelegates */,
@@ -114,6 +119,7 @@
 				F29C72D22E4411D300A191EC /* AvatarCell.swift */,
 				F29C72D42E44125400A191EC /* UsernameCell.swift */,
 				F29C72E82E441B0F00A191EC /* GraphDetailViewController.swift */,
+				F29C72EC2E44260A00A191EC /* PieChartView.swift */,
 			);
 			path = "prueba-tecnica-viper";
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C64B40812E43C22700D66F31 /* LaunchScreen.storyboard in Resources */,
+				F29C72EB2E441E8200A191EC /* test.json in Resources */,
 				C64B407E2E43C22700D66F31 /* Assets.xcassets in Resources */,
 				F29C728D2E43E31200A191EC /* GoogleService-Info.plist in Resources */,
 			);
@@ -252,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29C72ED2E44260A00A191EC /* PieChartView.swift in Sources */,
 				F29C72CF2E4411A900A191EC /* CustomTextField.swift in Sources */,
 				F29C72DF2E4416F000A191EC /* UIColor+Extension.swift in Sources */,
 				F29C72D12E4411BD00A191EC /* BaseButton.swift in Sources */,
@@ -416,7 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY93XGV7U7;
 				INFOPLIST_FILE = "prueba-tecnica-viper/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,7 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY93XGV7U7;
 				INFOPLIST_FILE = "prueba-tecnica-viper/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

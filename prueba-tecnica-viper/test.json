@@ -1,0 +1,104 @@
+{
+    "data": [
+        {
+            "pregunta": "¿Estaba limpia la sucursal?",
+            "values": [
+                {
+                    "label": "Si",
+                    "value": 60
+                },
+                {
+                    "label": "No",
+                    "value": 40
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué empresas cuentan con medidads de seguridad?",
+            "values": [
+                {
+                    "label": "Elektra",
+                    "value": 30
+                },
+                {
+                    "label": "Banco Azteca",
+                    "value": 15
+                },
+                {
+                    "label": "Neto",
+                    "value": 15
+                },
+                {
+                    "label": "Upax",
+                    "value": 25
+                },
+                {
+                    "label": "Dragon",
+                    "value": 10
+                },
+                {
+                    "label": "Otro",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Recomendarias alguna de nuestras tiendas a tus conocidos?",
+            "values": [
+                {
+                    "label": "Si",
+                    "value": 85
+                },
+                {
+                    "label": "No",
+                    "value": 5
+                },
+                {
+                    "label": "Tal vez",
+                    "value": 10
+                },
+                {
+                    "label": "Upax",
+                    "value": 25
+                },
+                {
+                    "label": "Dragon",
+                    "value": 10
+                },
+                {
+                    "label": "Otro",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál es la cantidad de gente en cada empresa?",
+            "values": [
+                {
+                    "label": "Elektra",
+                    "value": 15
+                },
+                {
+                    "label": "Banco Azteca",
+                    "value": 30
+                },
+                {
+                    "label": "Neto",
+                    "value": 15
+                },
+                {
+                    "label": "Upax",
+                    "value": 10
+                },
+                {
+                    "label": "Dragon",
+                    "value": 25
+                },
+                {
+                    "label": "Italika",
+                    "value": 5
+                }
+            ]
+        }
+    ]
+}
