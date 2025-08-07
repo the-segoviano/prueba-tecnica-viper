@@ -72,3 +72,10 @@ prueba-tecnica-viper/
 *   **Nuevas Funcionalidades:** Para añadir una nueva pantalla, se recomienda crear un nuevo Módulo dentro de la carpeta `Modules/`, siguiendo la estructura de carpetas y componentes existente.
 *   **Flujo de Datos:** Respetar el flujo de comunicación unidireccional (`View -> Presenter -> Interactor` y `Interactor -> Presenter -> View`) es clave para mantener el código desacoplado.
 *   **Responsabilidad Única:** Cada componente tiene un propósito claro. Evitar añadir lógica de negocio en la Vista o lógica de UI en el Interactor.
+
+
+## Evidencia
+
+1.  [App funcionando](https://mega.nz/file/Tj4SRRCI#NsrgDQzz49sXNNGvkfQrG8xGD_8yyIHa0GYYcjXj1fo).
+
+2.  [Feature de cambiar el background de la vista desde Firestore Realtima Database](https://mega.nz/file/6uhnAYiL#udKoeRqqcsnGLyMTaaS_ZBBbaU4F-2Ao3_x-A5-SMtU).
