@@ -81,8 +81,6 @@ class ViewController: UIViewController, ProfileViewProtocol {
         if let usernametextField = view.viewWithTag(Constants.Tags.userNameInput) as? UITextField {
             usernametextField.text = ""
         }
-        //UserDefaults.standard.set("", forKey: "url-firestore")
-        //UserDefaults.standard.set(nil, forKey: "avatar")
     }
     
     func updateBackgroundColor(with color: UIColor) {
