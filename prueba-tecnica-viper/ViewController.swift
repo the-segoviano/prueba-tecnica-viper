@@ -6,16 +6,12 @@
 //
 
 import UIKit
-import FirebaseFirestore
 
 class ViewController: UIViewController {
     
-    // MARK: Realtime Database
+    // MARK: Services
+    private let firestoreService = FirestoreService()
     private let colorManager = ColorManager()
-    
-    private let colorView = UIView()
-    private let nameLabel = UILabel()
-    private let hexLabel = UILabel()
     
     var lastProfile: Profile?
     
@@ -41,10 +37,6 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(sendRequest), for: .touchUpInside)
         return button
     }()
-    
-    // MARK: Firestore
-    let db = Firestore.firestore()
-
     
     // MARK: Life Cycle
     
@@ -136,83 +128,38 @@ class ViewController: UIViewController {
             return
         }
         
-        print(" avatarData; \(avatarData) ")
-        
-        /*
-        guard let imageData = avatarData.jpegData(compressionQuality: 0.5) else {
-            
-            return
-        }
-        */
-        
-        
         if avatarData.count > 1_048_576 { // Límite de 1MB de Firestore
-            // self.errorMessage = "La imagen es demasiado grande para guardarla (máx 1MB)."
-            print("La imagen es demasiado grande para guardarla (máx 1MB).")
+            Alert.show(title: "Error", message: "La imagen es demasiado grande para guardarla (máx 1MB).", on: self)
             return
         }
         
         let imageBase64String = avatarData.base64EncodedString()
         
-        
-        
         // Guardar los datos en Firestore
-        saveProfile(name: username, imageBase64: imageBase64String)
-        
-    }
-    
-    private func saveProfile(name: String, imageBase64: String) {
-        let profileData: [String: Any] = [
-            "fullName": name,
-            "imageBase64": imageBase64,
-            "createdAt": Timestamp(date: Date())
-        ]
-        
-        db.collection("profiles").addDocument(data: profileData) { [weak self] error in
+        firestoreService.saveProfile(name: username, imageBase64: imageBase64String) { [weak self] error in
+            guard let self = self else { return }
             if let error = error {
-                // self?.errorMessage = "Error al guardar los datos: \(error.localizedDescription)"
-                print("Error al guardar los datos: \(error.localizedDescription)")
+                Alert.show(title: "Error", message: "Error al guardar los datos: \(error.localizedDescription)", on: self)
             } else {
-                //self?.isSuccess = true
-                print(" Success ")
+                Alert.show(title: "Success", message: "Perfil guardado con éxito.", on: self)
             }
         }
     }
     
-    
     func fetchLastProfile() {
-        db.collection("profiles")
-            .order(by: "createdAt", descending: true)
-            .limit(to: 1)
-            .getDocuments { [weak self] (snapshot, error) in
-                if let error = error {
-                    // self?.errorMessage = "Error al obtener el último perfil: \(error.localizedDescription)"
-                    print("Error al obtener el último perfil: \(error.localizedDescription)")
-                    return
+        firestoreService.fetchLastProfile { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let profile):
+                self.lastProfile = profile
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
-                
-                // Asegurarse de que hay un documento
-                guard let document = snapshot?.documents.first else {
-                    self?.lastProfile = nil // No hay perfiles guardados
-                    return
-                }
-                
-                let data = document.data()
-                let id = document.documentID
-                let name = data["fullName"] as? String ?? "Sin nombre"
-                
-                // Decodificar la imagen desde Base64
-                if let imageBase64 = data["imageBase64"] as? String,
-                   let imageData = Data(base64Encoded: imageBase64),
-                   let image = UIImage(data: imageData) {
-                    
-                    print(" \n\n name: \(name) \n\n ")
-                    
-                    DispatchQueue.main.async {
-                        self?.lastProfile = Profile(id: id, fullName: name, image: image)
-                    }
-                }
+            case .failure(let error):
+                // Handle the error, e.g., show an alert
+                print("Error al obtener el último perfil: \(error.localizedDescription)")
+                self.lastProfile = nil
             }
+        }
     }
-    
 }

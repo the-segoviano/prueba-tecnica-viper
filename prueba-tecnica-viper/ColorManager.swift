@@ -21,7 +21,6 @@ class ColorManager {
         // Remover observador previo si existe
         stopListening()
         
-        // Escuchar cambios en el nodo 'accent'
         accentColorHandle = ref.child("colors/specific_colors/background").observe(.value) { [weak self] snapshot, _ in
             guard let self = self,
                   let value = snapshot.value as? [String: Any],

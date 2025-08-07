@@ -41,4 +41,11 @@ class Alert {
     }
     
     
+    static func show(title: String, message: String, on vc: UIViewController) {
+        showBasicAlert(on: vc,
+                       with: title,
+                       message: message)
+    }
+    
+    
 }

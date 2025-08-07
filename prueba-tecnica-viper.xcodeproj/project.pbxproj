@@ -40,6 +40,7 @@
 		F29C72EF2E44273300A191EC /* ChartValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72EE2E44273300A191EC /* ChartValue.swift */; };
 		F29C72F12E44274B00A191EC /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72F02E44274B00A191EC /* Question.swift */; };
 		F29C72F32E44275E00A191EC /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72F22E44275E00A191EC /* ChartData.swift */; };
+		F29C72F52E442C6300A191EC /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C72F42E442C6300A191EC /* FirestoreService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		F29C72EE2E44273300A191EC /* ChartValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValue.swift; sourceTree = "<group>"; };
 		F29C72F02E44274B00A191EC /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F29C72F22E44275E00A191EC /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		F29C72F42E442C6300A191EC /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				F29C72EE2E44273300A191EC /* ChartValue.swift */,
 				F29C72F02E44274B00A191EC /* Question.swift */,
 				F29C72F22E44275E00A191EC /* ChartData.swift */,
+				F29C72F42E442C6300A191EC /* FirestoreService.swift */,
 			);
 			path = "prueba-tecnica-viper";
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				F29C72EF2E44273300A191EC /* ChartValue.swift in Sources */,
 				F29C72DD2E4416DA00A191EC /* UIView+Extension.swift in Sources */,
 				F29C72C52E44102500A191EC /* ViewController+UITableView.swift in Sources */,
+				F29C72F52E442C6300A191EC /* FirestoreService.swift in Sources */,
 				F29C72C72E4410FB00A191EC /* Alerts.swift in Sources */,
 				F29C72F12E44274B00A191EC /* Question.swift in Sources */,
 				C64B40CD2E43DC3C00D66F31 /* Helpers.swift in Sources */,
