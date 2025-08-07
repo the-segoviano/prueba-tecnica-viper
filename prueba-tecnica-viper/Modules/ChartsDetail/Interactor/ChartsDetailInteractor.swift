@@ -11,9 +11,15 @@ class ChartsDetailInteractor: ChartsDetailInteractorInputProtocol {
     
     weak var presenter: ChartsDetailInteractorOutputProtocol?
     
+    private let resourceName: String
+    
+    init(resourceName: String = "test") {
+        self.resourceName = resourceName
+    }
+    
     func fetchChartData() {
         
-        guard let url = Bundle.main.url(forResource: "test", withExtension: "json") else {
+        guard let url = Bundle.main.url(forResource: self.resourceName, withExtension: "json") else {
             let error = NSError(domain: "com.viper.charts", code: 404, userInfo: [NSLocalizedDescriptionKey: "No se pudo encontrar el archivo test.json"])
             presenter?.didFailToRetrieveChartData(error: error)
             return

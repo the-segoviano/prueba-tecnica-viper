@@ -14,7 +14,7 @@ class ChartsDetailRouter: ChartsDetailRouterProtocol {
         let view = GraphDetailViewController()
         
         let presenter: ChartsDetailPresenterProtocol & ChartsDetailInteractorOutputProtocol = ChartsDetailPresenter()
-        let interactor: ChartsDetailInteractorInputProtocol = ChartsDetailInteractor()
+        let interactor: ChartsDetailInteractorInputProtocol = ChartsDetailInteractor(resourceName: "test")
         let router: ChartsDetailRouterProtocol = ChartsDetailRouter()
         
         view.presenter = presenter

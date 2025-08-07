@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,6 +51,16 @@
 		F29C73132E445A8500A191EC /* ChartsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C73122E445A8500A191EC /* ChartsDetailRouter.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F29C73292E4473E800A191EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C64B40692E43C21A00D66F31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C64B40702E43C21A00D66F31;
+			remoteInfo = "prueba-tecnica-viper";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		C64B40712E43C21A00D66F31 /* prueba-tecnica-viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "prueba-tecnica-viper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64B40742E43C21A00D66F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +104,12 @@
 		F29C730E2E445A3100A191EC /* ChartsDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDetailPresenter.swift; sourceTree = "<group>"; };
 		F29C73102E445A6300A191EC /* ChartsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDetailInteractor.swift; sourceTree = "<group>"; };
 		F29C73122E445A8500A191EC /* ChartsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDetailRouter.swift; sourceTree = "<group>"; };
+		F29C73252E4473E800A191EC /* prueba-tecnica-viperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "prueba-tecnica-viperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F29C73262E4473E800A191EC /* prueba-tecnica-viperTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "prueba-tecnica-viperTests"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C64B406E2E43C21A00D66F31 /* Frameworks */ = {
@@ -106,6 +121,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F29C73222E4473E800A191EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -113,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				C64B40732E43C21A00D66F31 /* prueba-tecnica-viper */,
+				F29C73262E4473E800A191EC /* prueba-tecnica-viperTests */,
 				C64B40722E43C21A00D66F31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				C64B40712E43C21A00D66F31 /* prueba-tecnica-viper.app */,
+				F29C73252E4473E800A191EC /* prueba-tecnica-viperTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -345,17 +369,44 @@
 			productReference = C64B40712E43C21A00D66F31 /* prueba-tecnica-viper.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F29C73242E4473E800A191EC /* prueba-tecnica-viperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F29C732D2E4473E800A191EC /* Build configuration list for PBXNativeTarget "prueba-tecnica-viperTests" */;
+			buildPhases = (
+				F29C73212E4473E800A191EC /* Sources */,
+				F29C73222E4473E800A191EC /* Frameworks */,
+				F29C73232E4473E800A191EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F29C732A2E4473E800A191EC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F29C73262E4473E800A191EC /* prueba-tecnica-viperTests */,
+			);
+			name = "prueba-tecnica-viperTests";
+			packageProductDependencies = (
+			);
+			productName = "prueba-tecnica-viperTests";
+			productReference = F29C73252E4473E800A191EC /* prueba-tecnica-viperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C64B40692E43C21A00D66F31 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					C64B40702E43C21A00D66F31 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					F29C73242E4473E800A191EC = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = C64B40702E43C21A00D66F31;
 					};
 				};
 			};
@@ -376,6 +427,7 @@
 			projectRoot = "";
 			targets = (
 				C64B40702E43C21A00D66F31 /* prueba-tecnica-viper */,
+				F29C73242E4473E800A191EC /* prueba-tecnica-viperTests */,
 			);
 		};
 /* End PBXProject section */
@@ -389,6 +441,13 @@
 				F29C72EB2E441E8200A191EC /* test.json in Resources */,
 				C64B407E2E43C22700D66F31 /* Assets.xcassets in Resources */,
 				F29C728D2E43E31200A191EC /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F29C73232E4473E800A191EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +497,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F29C73212E4473E800A191EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F29C732A2E4473E800A191EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C64B40702E43C21A00D66F31 /* prueba-tecnica-viper */;
+			targetProxy = F29C73292E4473E800A191EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C64B407F2E43C22700D66F31 /* LaunchScreen.storyboard */ = {
@@ -616,6 +690,53 @@
 			};
 			name = Release;
 		};
+		F29C732B2E4473E800A191EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.segoviano.dev.prueba-tecnica-viperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/prueba-tecnica-viper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/prueba-tecnica-viper";
+			};
+			name = Debug;
+		};
+		F29C732C2E4473E800A191EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.segoviano.dev.prueba-tecnica-viperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/prueba-tecnica-viper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/prueba-tecnica-viper";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -633,6 +754,15 @@
 			buildConfigurations = (
 				C64B40862E43C22700D66F31 /* Debug */,
 				C64B40872E43C22700D66F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F29C732D2E4473E800A191EC /* Build configuration list for PBXNativeTarget "prueba-tecnica-viperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F29C732B2E4473E800A191EC /* Debug */,
+				F29C732C2E4473E800A191EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
