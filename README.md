@@ -20,6 +20,7 @@ Este proyecto es una aplicación iOS nativa desarrollada en Swift que demuestra 
     *   **Realtime Database:** Para la funcionalidad de cambio de color en tiempo real.
 *   **Arquitectura:** **VIPER** (View, Interactor, Presenter, Entity, Router)
 *   **Framework de Pruebas:** XCTest
+*   iOS mínimo **17**: Debido a la compatibilidad que requiere **SwiftUI** para el uso del Framework **Charts**
 
 ## Estructura del Proyecto
 
