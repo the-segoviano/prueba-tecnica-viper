@@ -26,11 +26,16 @@ extension String {
     }
     
     func isValidInput() -> Bool {
+        /*
         let myCharSet = CharacterSet(charactersIn:"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
         let output: String = self.trimmingCharacters(in: myCharSet.inverted)
         let isValid: Bool = (self == output)
-        print("\(isValid)")
         return isValid
+        */
+        let regex = try! NSRegularExpression(pattern: "[^a-zA-Z]")
+        let range = NSRange(location: 0, length: self.utf16.count)
+        let match = regex.firstMatch(in: self, options: [], range: range)
+        return match == nil
     }
     
 }
